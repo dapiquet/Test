@@ -1,0 +1,27 @@
+{
+    "routes": [
+        {
+            "route": "/app*",
+			"redirect": "/redirect.html",
+            "statusCode": 301
+        }
+    ],
+	"responseOverrides": {
+    "400": {
+      "rewrite": "/redirect.html"
+    },
+    "401": {
+      "statusCode": 302,
+      "redirect": "/redirect.html"
+    },
+    "403": {
+      "rewrite": "/redirect.html"
+    },
+    "404": {
+      "rewrite": "/redirect.html"
+    }
+	 "405": {
+      "rewrite": "/redirect.html"
+    }
+  }
+}
